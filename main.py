@@ -44,14 +44,14 @@ def main():
         print("Analysis results DataFrame:")
         print(df)
 
-        df.to_csv(f'deepface_analysis_results_{index}.csv', index=False)
+        df.to_csv(f'result/deepface_analysis_results_{index}.csv', index=False)
         print(f"Analysis results saved to deepface_analysis_results_{index}.csv")
 
         if errors:
             print("\nImages that could not be analyzed:")
             for error in errors:
                 print(error)
-            with open(f'result/deepface_analysis_errors_{index}.txt', 'w') as f:
+            with open(f'deepface_analysis_errors_{index}.txt', 'w') as f:
                 for error in errors:
                     f.write(f"{error}\n")
             print(f"Error list saved to deepface_analysis_errors_{index}.txt")
