@@ -35,7 +35,7 @@ def main():
         "image/adults"
     ]
 
-    repeat = 1
+    repeat = 5
 
     for index in range(repeat):
         results, errors = analyze_images_in_folders(folder_paths)
